@@ -174,7 +174,7 @@ def document_extraction_orchestrator(context):
     
 
     # Return the list of parent files and processed documents as a JSON string
-    return json.dumps({'parent_files': parent_files, 'processed_documents': extracted_pdf_files})
+    return json.dumps({'parent_files': parent_files, 'processed_documents': [x['sourcepage'] for x in extracted_pdf_files]})
 
 @app.activity_trigger(input_name="activitypayload")
 def check_containers(activitypayload: str):
