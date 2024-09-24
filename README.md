@@ -1,0 +1,1 @@
+# AzFunc_DocIntelligence
