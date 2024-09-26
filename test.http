@@ -1,0 +1,10 @@
+@FUNCTION_URI = https://<YOUR-FUNCTION-NAME>.azurewebsites.net
+@FUNCTION_KEY = <YOUR-FUNCTION-KEY>
+
+POST {{FUNCTION_URI}}/api/orchestrators/document_extraction_orchestrator?code={{FUNCTION_KEY}}
+
+{
+    "source_container": "test-source",
+    "extract_container": "test-extract",
+    "prefix_path": ""
+}
